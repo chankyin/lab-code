@@ -22,15 +22,16 @@ int querySymbol(){
 }
 
 int main(){
-  int a = querySymbol(), b = querySymbol();
-  if(a == b){
+  int diff = (querySymbol() - querySymbol()) % 3;
+  while(diff < 0) diff += 3;
+  if(diff == 0){
     cout << "Nobody wins" << endl;
     return 0;
   }
-  if(a + 1 == b || a - 2 == b){
-    cout << "User 1 wins" << endl;
+  if(diff == 1){
+    cout << "User 2 wins" << endl;
     return 0;
   }
-  cout << "User 2 wins" << endl;
+  cout << "User 1 wins" << endl;
   return 0;
 }
