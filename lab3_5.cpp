@@ -2,15 +2,14 @@
 using namespace std;
 
 int main(){
-  int v[5] = {};
-  for(int i = 0; i < 5; ++i) cin >> v[i];
-  int sumPositive, sumNegative, sumAll = 0;
+  int sumPositive = 0, sumNegative = 0;
   for(int i = 0; i < 5; ++i){
-    if(v[i] > 0) sumPositive += v[i];
-    if(v[i] < 0) sumNegative += v[i];
-    sumAll += v[i];
+    int input = 0;
+    cin >> input;
+    if(input > 0) sumPositive += input;
+    if(input < 0) sumNegative += input;
   }
   cout << "Sum of all positive numbers = " << sumPositive << endl;
   cout << "Sum of all negative numbers = " << sumNegative << endl;
-  cout << "Sum of all numbers = " << sumAll << endl;
+  cout << "Sum of all numbers = " << sumPositive + sumNegative << endl;
 }
