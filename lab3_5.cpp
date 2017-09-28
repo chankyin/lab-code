@@ -9,7 +9,5 @@ int main(){
     if(input > 0) sumPositive += input;
     if(input < 0) sumNegative += input;
   }
-  cout << "Sum of all positive numbers = " << sumPositive << endl;
-  cout << "Sum of all negative numbers = " << sumNegative << endl;
-  cout << "Sum of all numbers = " << sumPositive + sumNegative << endl;
+  cout << "Sum of all positive numbers = " << sumPositive << endl << "Sum of all negative numbers = " << sumNegative << endl << "Sum of all numbers = " << sumPositive + sumNegative << endl;
 }
