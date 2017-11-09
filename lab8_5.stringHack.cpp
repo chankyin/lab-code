@@ -49,8 +49,8 @@ std::string swapWords(std::string string, char delimiter, int i, int j){
     if(i > j) return swapWords(string, delimiter, j, i);
 
     int iStart, jStart;
-    std::string iWord = getNthWord(string, delimiter, i, iStart) + delimiter;
-    std::string jWord = getNthWord(string, delimiter, j, jStart) + delimiter;
+    std::string iWord = getNthWord(string, delimiter, i, iStart);
+    std::string jWord = getNthWord(string, delimiter, j, jStart);
 
     return string.substr(0, iStart) + jWord + string.substr(iStart + iWord.length(), jStart - iStart - iWord.length()) + iWord + string.substr(jStart + jWord.length());
 }
