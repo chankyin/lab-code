@@ -13,10 +13,8 @@ void swap(int &a, int &b) {
  *              This is similar to how we normally pass the array length, except that this time the array actually takes more memory.
  */
 void selectionSort(int array[], int count) {
-    int minIndex, minValue;
     for (int i = 0; i < count; ++i) {
-        minIndex = i;
-        minValue = array[i];
+        int minIndex = i, minValue = array[i];
         for (int j = i + 1; j < count; ++j) {
             if (minValue > array[j]) {
                 minIndex = j;
