@@ -42,10 +42,7 @@ std::string getNthWord(std::string string, char delimiter, int n, int &start) {
         // assuming string size is large enough, i.e. string.find() does not return std::string::npos
     }
     int end = string.find(delimiter, start);
-    if (end == std::string::npos) {
-        return string.substr(start); // std::string::npos - start may not work if string.size() is proximal to std::string::npos (although we are wrongly using int rather than unsigned long/size_t anyway)
-    }
-    return string.substr(start, end - start);
+    return string.substr(start, end - start); // even std::string::npos - start must be a valid value here.
 }
 
 std::string swapWords(std::string string, char delimiter, int i, int j){
