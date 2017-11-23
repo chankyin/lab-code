@@ -13,6 +13,14 @@ struct SimpleIntVector {
         }
         newArray[size++] = value;
     }
+
+    double avg(){
+        double sum = 0.0;
+        for(size_t i = 0; i < size; ++i){
+            sum += array[i];
+        }
+        return sum / size;
+    }
 };
 
 
@@ -24,4 +32,6 @@ int main() {
         cin >> last;
         vector.push(last);
     }
+
+    cout << vector.avg() << endl;
 }
